@@ -6,6 +6,8 @@ Data/human/ 에는 GNE 모델 학습을 위한 data (BioGrid edgelist, Chip-seq 
 
 GNE 모델의 아웃풋을 0.8로 cropping 하여 생성한 edgelist 결과가 final_edgelist.tsv에 저장되어 있다.
 
+final_edgelist.tsv를 근거로 생성한 drug-T2T gene interaction data가 drug_T2T_interaction.tsv에 저장되어 있다.
+
 # References
 1. Malki, M.A., Pearson, E.R. Drug–drug–gene interactions and adverse drug reactions. Pharmacogenomics J 20, 355–366 (2020). https://doi.org/10.1038/s41397-019-0122-0
 2.  Lazarou J, Pomernaz B, Corey P. Incidence of adverse drug reactions in hospitalized patients: a meta-analysis of prospective studies. Surv Anesthesiol. 1999;43:53–4.
