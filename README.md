@@ -4,9 +4,13 @@ GNE 모델과 DGIdb를 활용하여 T2T-Unique 유전자와 약물 간의 상관
 
 Data/human/ 에는 GNE 모델 학습을 위한 data (BioGrid edgelist, Chip-seq expression data)와 학습 결과인 embedding이 들어있다.
 
+GNE_human_result.log 파일에 학습 경과가 저장되어 있다.
+
 GNE 모델의 아웃풋을 0.8로 cropping 하여 생성한 edgelist 결과가 final_edgelist.tsv에 저장되어 있다.
 
 final_edgelist.tsv를 근거로 생성한 drug-T2T gene interaction data가 drug_T2T_interaction.tsv에 저장되어 있다.
+
+Data/mapping/ 내에 gene 등의 식별을 위한 모든 정보가 저장되어 있다.
 
 # References
 1. Malki, M.A., Pearson, E.R. Drug–drug–gene interactions and adverse drug reactions. Pharmacogenomics J 20, 355–366 (2020). https://doi.org/10.1038/s41397-019-0122-0
