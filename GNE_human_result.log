@@ -1,0 +1,218 @@
+2023-11-23 09:25:29.857904: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2023-11-23 09:25:29.857986: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING: Logging before flag parsing goes to stderr.
+W1123 09:25:32.148608 140701052450560 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+/mss/home_student/201812439/Thesis/GNE/GNE/LoadData.py:69: NumbaWarning: 
+Compilation is falling back to object mode WITH looplifting enabled because Function "construct_X" failed type inference due to: non-precise type pyobject
+During: typing of argument at /mss/home_student/201812439/Thesis/GNE/GNE/LoadData.py (71)
+
+File "LoadData.py", line 71:
+    def construct_X(self):
+        self.X['data_id_list'] = np.ndarray(shape=(len(self.links)), dtype=np.int32)
+        ^
+
+  @jit
+/mss/home_student/201812439/Thesis/GNE/GNE/LoadData.py:69: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "construct_X" failed type inference due to: Cannot determine Numba type of <class 'numba.core.dispatcher.LiftedLoop'>
+
+File "LoadData.py", line 75:
+    def construct_X(self):
+        <source elided>
+
+        for i in range(len(self.links)):
+        ^
+
+  @jit
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:152: NumbaWarning: Function "construct_X" was compiled in object mode without forceobj=True, but has lifted loops.
+
+File "LoadData.py", line 71:
+    def construct_X(self):
+        self.X['data_id_list'] = np.ndarray(shape=(len(self.links)), dtype=np.int32)
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:162: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "LoadData.py", line 71:
+    def construct_X(self):
+        self.X['data_id_list'] = np.ndarray(shape=(len(self.links)), dtype=np.int32)
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/Thesis/GNE/GNE/LoadData.py:69: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "construct_X" failed type inference due to: non-precise type pyobject
+During: typing of argument at /mss/home_student/201812439/Thesis/GNE/GNE/LoadData.py (75)
+
+File "LoadData.py", line 75:
+    def construct_X(self):
+        <source elided>
+
+        for i in range(len(self.links)):
+        ^
+
+  @jit
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:152: NumbaWarning: Function "construct_X" was compiled in object mode without forceobj=True.
+
+File "LoadData.py", line 75:
+    def construct_X(self):
+        <source elided>
+
+        for i in range(len(self.links)):
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:162: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "LoadData.py", line 75:
+    def construct_X(self):
+        <source elided>
+
+        for i in range(len(self.links)):
+        ^
+
+  state.func_ir.loc))
+W1123 09:27:52.700905 140701052450560 deprecation.py:506] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/util/dispatch.py:201: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2023-11-23 09:27:53.253277: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-23 09:27:53.292771: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2596720000 Hz
+2023-11-23 09:27:53.296628: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7767620 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2023-11-23 09:27:53.296700: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2023-11-23 09:27:53.300647: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-11-23 09:27:53.300811: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2023-11-23 09:27:53.300899: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (bps): /proc/driver/nvidia/version does not exist
+/mss/home_student/201812439/Thesis/GNE/GNE/evaluation.py:61: NumbaWarning: 
+Compilation is falling back to object mode WITH looplifting enabled because Function "get_edge_embeddings" failed type inference due to: No implementation of function Function(<built-in function array>) found for signature:
+ 
+ >>> array(array(float64, 2d, C))
+ 
+There are 2 candidate implementations:
+  - Of which 2 did not match due to:
+  Overload in function 'array': File: numba/core/typing/npydecl.py: Line 489.
+    With argument(s): '(array(float64, 2d, C))':
+   Rejected as the implementation raised a specific error:
+     TypingError: array(float64, 2d, C) not allowed in a homogeneous sequence
+  raised from /mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/typing/npydecl.py:457
+
+During: resolving callee type: Function(<built-in function array>)
+During: typing of call at /mss/home_student/201812439/Thesis/GNE/GNE/evaluation.py (65)
+
+
+File "evaluation.py", line 65:
+def get_edge_embeddings(Embeddings, edge_list):
+    <source elided>
+        for i in range(len(edge_list)):
+            edge = np.array(edge_list)[i, :]
+            ^
+
+  @jit
+/mss/home_student/201812439/Thesis/GNE/GNE/evaluation.py:61: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "get_edge_embeddings" failed type inference due to: Cannot determine Numba type of <class 'numba.core.dispatcher.LiftedLoop'>
+
+File "evaluation.py", line 64:
+def get_edge_embeddings(Embeddings, edge_list):
+    <source elided>
+        embs = []
+        for i in range(len(edge_list)):
+        ^
+
+  @jit
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:152: NumbaWarning: Function "get_edge_embeddings" was compiled in object mode without forceobj=True, but has lifted loops.
+
+File "evaluation.py", line 63:
+def get_edge_embeddings(Embeddings, edge_list):
+        embs = []
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:162: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "evaluation.py", line 63:
+def get_edge_embeddings(Embeddings, edge_list):
+        embs = []
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/Thesis/GNE/GNE/evaluation.py:61: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "get_edge_embeddings" failed type inference due to: non-precise type pyobject
+During: typing of argument at /mss/home_student/201812439/Thesis/GNE/GNE/evaluation.py (64)
+
+File "evaluation.py", line 64:
+def get_edge_embeddings(Embeddings, edge_list):
+    <source elided>
+        embs = []
+        for i in range(len(edge_list)):
+        ^
+
+  @jit
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:152: NumbaWarning: Function "get_edge_embeddings" was compiled in object mode without forceobj=True.
+
+File "evaluation.py", line 64:
+def get_edge_embeddings(Embeddings, edge_list):
+    <source elided>
+        embs = []
+        for i in range(len(edge_list)):
+        ^
+
+  state.func_ir.loc))
+/mss/home_student/201812439/.local/lib/python3.6/site-packages/numba/core/object_mode_passes.py:162: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "evaluation.py", line 64:
+def get_edge_embeddings(Embeddings, edge_list):
+    <source elided>
+        embs = []
+        for i in range(len(edge_list)):
+        ^
+
+  state.func_ir.loc))
+{'id_embedding_size': 128, 'attr_embedding_size': 128, 'representation_size': 128, 'alpha': 1, 'n_neg_samples': 10, 'epoch': 20, 'batch_size': 256, 'learning_rate': 0.005}
+### Loading [./data/human/edgelist_biogrid.txt]...
+Creating train test and validation split
+Total genes: 6813
+Training interactions (positive): 110484
+Training interactions (negative): 110484
+Validation interactions (positive): 12277
+Validation interactions (negative): 12277
+Test interactions (positive): 13641
+Test interactions (negative): 13641
+Dimension of attributes: 58
+Number of genes: 6813
+Making adjacency matrix symmetric since the graph is undirected.
+{'id_embedding_size': 128, 'attr_embedding_size': 128, 'representation_size': 128, 'alpha': 1, 'n_neg_samples': 10, 'epoch': 20, 'batch_size': 256, 'learning_rate': 0.005}
+Using structure and attribute embedding
+Epoch:      1, Train-Batch Loss: 7.738764872, Validation AUC: 0.550352126 *
+Epoch:      2, Train-Batch Loss: 6.134333246, Validation AUC: 0.617928668 *
+Epoch:      3, Train-Batch Loss: 5.748002864, Validation AUC: 0.703176156 *
+Epoch:      4, Train-Batch Loss: 4.961417613, Validation AUC: 0.714078550 *
+Epoch:      5, Train-Batch Loss: 4.380829697, Validation AUC: 0.738212112 *
+Epoch:      6, Train-Batch Loss: 3.852816616, Validation AUC: 0.746411937 *
+Epoch:      7, Train-Batch Loss: 3.415219191, Validation AUC: 0.761746953 *
+Epoch:      8, Train-Batch Loss: 2.936471696, Validation AUC: 0.773954926 *
+Epoch:      9, Train-Batch Loss: 2.477453243, Validation AUC: 0.776690227 *
+Epoch:     10, Train-Batch Loss: 2.302369453, Validation AUC: 0.779500081 *
+Epoch:     11, Train-Batch Loss: 2.016855795, Validation AUC: 0.789322832 *
+Epoch:     12, Train-Batch Loss: 1.744364384, Validation AUC: 0.787268581 
+Epoch:     13, Train-Batch Loss: 1.614139082, Validation AUC: 0.796667851 *
+Epoch:     14, Train-Batch Loss: 1.403748770, Validation AUC: 0.794246938 
+Epoch:     15, Train-Batch Loss: 1.284144131, Validation AUC: 0.799610073 *
+Epoch:     16, Train-Batch Loss: 1.167852125, Validation AUC: 0.798999406 
+Epoch:     17, Train-Batch Loss: 1.074843162, Validation AUC: 0.799002273 
+Epoch:     18, Train-Batch Loss: 0.975311368, Validation AUC: 0.801610454 *
+Epoch:     19, Train-Batch Loss: 0.895927624, Validation AUC: 0.800330296 
+Epoch:     20, Train-Batch Loss: 0.913833901, Validation AUC: 0.800039402 
+Alpha:      1, GNE Test ROC Score: 0.886344828, GNE Test AP score: 0.889565399
